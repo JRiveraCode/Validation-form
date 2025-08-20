@@ -29,10 +29,10 @@ let countrysValid = false;
 
 // Functions
 
-const Validation = (evento, Validation, elemento) => {
+const Validation = (evento, Valid, elemento) => {
     const information = evento.target.parentElement.children[1];
     formBtm.disabled = !(userNameValid && emailValid && phoneValid && passwordValid && confirmPasswordValid && countrysValid);
-    if (Validation) {
+    if (Valid) {
         elemento.classList.add('correct');
         elemento.classList.remove('incorrect');
         information.classList.remove('show-information');
