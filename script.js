@@ -101,9 +101,9 @@ form.addEventListener('submit', evento => {
         userName: userNameInput.value,
         email: emailInput.value,
         phone: phoneCode.innerHTML + ' ' + phoneInput.value,
-        password: passwordInput.value,
+        // password: passwordInput.value,
     };
-    // console.log(user);
+    console.log(user);
 });
 
 
