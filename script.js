@@ -12,7 +12,7 @@ const phoneCode = document.querySelector('#phone-code');
 const phoneInput = document.querySelector('#phone');
 const passwordInput = document.querySelector('#password');
 const confirmPasswordInput = document.querySelector('#confirm-password');
-const formBtm = document.querySelector('#form-btm');
+const formBtn = document.querySelector('#form-btn');
 const form = document.querySelector('#form');
 
 // Validation
@@ -30,8 +30,11 @@ let countrysValid = false;
 // Functions
 
 const Validation = (evento, Valid, elemento) => {
+    // .target.parentElement.children[1] is the information element
     const information = evento.target.parentElement.children[1];
-    formBtm.disabled = !(userNameValid && emailValid && phoneValid && passwordValid && confirmPasswordValid && countrysValid);
+    console.log(information);
+    
+    formBtn.disabled = !(userNameValid && emailValid && phoneValid && passwordValid && confirmPasswordValid && countrysValid);
     if (Valid) {
         elemento.classList.add('correct');
         elemento.classList.remove('incorrect');
@@ -82,6 +85,9 @@ phoneInput.addEventListener('input', evento => {
 passwordInput.addEventListener('input', evento => {
     passwordValid = exRePass.test(evento.target.value);
     Validation(evento, passwordValid, passwordInput);
+    // Validar confirmación de contraseña
+    confirmPasswordValid = passwordInput.value === confirmPasswordInput.value;
+    Validation({ target: confirmPasswordInput }, confirmPasswordValid, confirmPasswordInput);
 });
 
 confirmPasswordInput.addEventListener('input', evento => {

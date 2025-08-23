@@ -71,7 +71,7 @@ body {
     width: 100%;
 }
 
-#form-btm {
+#form-btn {
     padding: 1rem;
     background-color: #22c55e;
     color: #f8fafc;
@@ -79,7 +79,7 @@ body {
     cursor: pointer;
 }
 
-#form-btm:disabled {
+#form-btn:disabled {
     opacity: 0.5;
     cursor: not-allowed;
 }
