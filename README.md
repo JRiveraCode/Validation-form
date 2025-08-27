@@ -28,7 +28,7 @@ Este proyecto es un formulario web moderno para validar datos de usuario de mane
 - `script.js`: lógica de validación y control de interacción.
 
 ## Vista previa
-![Preview](https://i.imgur.com/2yQ4Q4B.png)
+![Preview](img-previa.png)
 
 ---
 
