@@ -32,7 +32,7 @@ let countrysValid = false;
 const Validation = (evento, Valid, elemento) => {
     // .target.parentElement.children[1] is the information element
     const information = evento.target.parentElement.children[1];
-    console.log(information);
+    // console.log(information);
     
     formBtn.disabled = !(userNameValid && emailValid && phoneValid && passwordValid && confirmPasswordValid && countrysValid);
     if (Valid) {
