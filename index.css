@@ -6,13 +6,15 @@
 
 body {
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: linear-gradient(135deg, #1a162a 0%, #312e81 100%);
-    padding: 1rem;
+    padding: 1rem 1rem 0 1rem; /* espacio para el footer */
     font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    gap: 1rem;
 }
 
 #form {
@@ -26,6 +28,7 @@ body {
     box-shadow: 0 8px 32px 0 rgba(44, 44, 84, 0.37);
     border: 1px solid #312e81;
     max-width: 420px;
+    margin: auto;
 }
 
 #form-title {
@@ -152,6 +155,60 @@ select.form-input {
 
 select.form-input:focus {
     background: #6366f1;
+}
+
+#footer {
+    width: 100vw;
+    background: linear-gradient(90deg, #312e81 0%, #6366f1 100%);
+    color: #f8fafc;
+    text-align: center;
+    padding: 1.5rem 0 1.2rem 0;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    box-shadow: 0 -2px 8px rgba(44,44,84,0.07);
+    margin-top: 2rem;
+    position: static;
+    left: unset;
+    bottom: unset;
+    z-index: unset;
+}
+
+#footer p {
+    margin: 0;
+    font-weight: 500;
+}
+
+#github-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #bebebe;
+    background: #312e81cc;
+    padding: 0.4rem 1rem;
+    border-radius: 0.4rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+}
+
+#github-link:hover {
+    background: #6366f1;
+    color: #fff;
+}
+
+@media (max-width: 640px) {
+    #form {
+        padding: 1.2rem 0.7rem;
+        max-width: 98vw;
+    }
+    #footer {
+        font-size: 0.95rem;
+        padding: 1rem 0 0.7rem 0;
+        box-shadow: none;
+        margin-top: 1rem;
+    }
+    body {
+        padding-bottom: 0;
+    }
 }
 
 @media (min-width: 640px) {
